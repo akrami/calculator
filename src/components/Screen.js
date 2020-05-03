@@ -3,11 +3,11 @@ import Result from './screen/Result';
 import History from './screen/History';
 
 const Screen = props => {
+    const { current, result, history } = props;
     return (
         <div>
-            <h2>Screen</h2>
-            <History />
-            <Result />
+            <History  history={history} />
+            <Result current={current} result={result} />
         </div>
     );
 }

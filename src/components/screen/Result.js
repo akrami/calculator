@@ -1,8 +1,9 @@
 import React from 'react';
 
 const Result = props => {
+    const { current, result } = props;
     return (
-        <h3>Result Screen</h3>
+        <h1 className={result?'blue':'red'}>{current}</h1>
     );
 }
 
