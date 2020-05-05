@@ -1,0 +1,26 @@
+.key {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #FF9500;
+    margin: 5px;
+    font-family: "Fira Mono", monospace;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.key:hover {
+    background-color: rgb(226, 138, 13);
+}
+
+.numKey {
+    background-color: #E9F0F4;
+    color: #51575E;
+}
+
+.numKey:hover { 
+    background-color: rgb(224, 229, 231);
+}

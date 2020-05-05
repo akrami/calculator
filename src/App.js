@@ -17,10 +17,11 @@ class App extends Component {
   setCurrent = value => this.setState({ current: value, result: false });
   setResult = () => {
     if (this.state.result) return null;
-    if(this.state.current.length>1 && this.state.current.slice(-1)==='.' && ["+", "-", "×", "÷"].includes(this.state.current.slice(-2,-1))) this.setState({current: this.state.current.slice(0,-2)});
+    if(this.state.current.length>1 && this.state.current.slice(-1)==='.' && ["+", "-", "×", "÷"].includes(this.state.current.slice(-2,-1))) return null;
+    let evalResult = eval(this.state.current.replace(/×/g,'*').replace(/÷/g,'/')).toString();
     this.setState({ result: true });
-    this.setState({ history: [...this.state.history, this.state.current] });
-    this.setState({ current: eval(this.state.current.replace(/×/g,'*').replace(/÷/g,'/')).toString() });
+    this.setState({ history: [...this.state.history, this.state.current+"="+evalResult] });
+    this.setState({ current: evalResult });
     // this.setState({ current: '0' });
   }
 

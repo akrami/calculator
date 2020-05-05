@@ -1,7 +1,10 @@
 import React from 'react';
+import styles from './Key.module.css';
+import cx from 'classnames';
 
 const Key = props => {
-    const { value, isNum, current, result, setCurrent } = props;
+    const { value, current, result, setCurrent } = props;
+    const isNum = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].includes(value);
 
     const handleKeyPress = () => {
         if (isNum && current.length > 1 && current.slice(-1) === '0' && ["+", "-", "×", "÷"].includes(current.slice(-2, -1))) {
@@ -19,7 +22,7 @@ const Key = props => {
         }
     }
     return (
-        <button onClick={handleKeyPress}>{value}</button>
+        <button onClick={handleKeyPress} className={cx(styles.key, {[styles.numKey]: isNum})}>{value}</button>
     );
 }
 
