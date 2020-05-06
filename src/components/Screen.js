@@ -6,7 +6,7 @@ const Screen = props => {
     const { current, result, history } = props;
     return (
         <div>
-            <History  history={history} />
+            <History history={history} />
             <Result current={current} result={result} />
         </div>
     );

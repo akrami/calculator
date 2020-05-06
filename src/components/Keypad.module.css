@@ -1,17 +1,17 @@
 .resultKey {
-    width: 110px;
-    height: 50px;
-    border-radius: 25px;
-    border: none;
-    background-color: #2EC973;
-    margin: 2px;
-    font-family: "Fira Mono", monospace;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
+  width: 110px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  background-color: #2ec973;
+  margin: 2px;
+  font-family: "Fira Mono", monospace;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
 }
 
 .resultKey:hover {
-    background-color: rgb(42, 170, 99);
+  background-color: rgb(42, 170, 99);
 }
